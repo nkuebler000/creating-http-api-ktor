@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "530ce487-eaf8-463a-bf36-6b6c3166ef56",
+		"name": "creating-http-api-ktor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/customer",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/customer/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"customer",
+								":id"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "fea0bdcd-211f-4004-8e76-6bc06348ff8b"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"fea0bdcd-211f-4004-8e76-6bc06348ff8b\",\n    \"firstName\": \"Tiger\",\n    \"lastName\": \"Cat\",\n    \"email\": \"tiger@subsonic.us\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/customer",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
